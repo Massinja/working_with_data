@@ -29,10 +29,8 @@ def my_data_transform(csv_content)
         our_data[row_index][email_index] = email_transformation(email)
 
         age = our_data[row_index][age_index]
-        #puts our_data[row_index][age_index] = age_transformation(age)
-        puts age_transformation(age)
-        
-                
+        our_data[row_index][age_index] = age_transformation(age)
+              
         order_time = our_data[row_index][order_at_index]
         our_data[row_index][order_at_index] = time_transformation(order_time)
 
@@ -65,20 +63,16 @@ def email_transformation(email)
 end
 
 def age_transformation(age)
-    puts age
-    case age
+    age_int = age.to_i
+    case age_int
     when 1..20
-        puts "hi, 1-20"
-        return "[1->20]"
+        return "1->20"
     when 21..40
-        puts "hi, 21-40"
-        return "[21->40]"
+        return "21->40"
     when 41..65
-        puts "hi, 41-65"
-        return "[41->65]"
+        return "41->65"
     when 66..99
-        puts "hi, 66-99"
-        return "[66->99]"
+        return "66->99"
     end
     
 end
@@ -99,12 +93,4 @@ def time_transformation(order_time)
 end
 
 
-my_data_transform("Gender,FirstName,LastName,UserName,Email,Age,City,Device,Coffee Quantity,Order At\nMale,Carl,Wilderman,carl,wilderman_carl@yahoo.com,29,Seattle,Safari iPhone,2,2020-03-06 16:37:56\nMale,Marvin,Lind,marvin,marvin_lind@hotmail.com,77,Detroit,Chrome Android,2,2020-03-02 13:55:51\nFemale,Shanelle,Marquardt,shanelle,marquardt.shanelle@hotmail.com,21,Las Vegas,Chrome,1,2020-03-05 17:53:05\nFemale,Lavonne,Romaguera,lavonne,romaguera.lavonne@yahoo.com,81,Seattle,Chrome,2,2020-03-04 10:33:53\nMale,Derick,McLaughlin,derick,mclaughlin.derick@hotmail.com,47,Chicago,Chrome Android,1,2020-03-05 15:19:48\n")
-=begin
-array_2d.each do |row|
-    row.each do |element|
-        print "#{element} "
-    end
-    puts
-  end
-=end
+#my_data_transform("Gender,FirstName,LastName,UserName,Email,Age,City,Device,Coffee Quantity,Order At\nMale,Carl,Wilderman,carl,wilderman_carl@yahoo.com,29,Seattle,Safari iPhone,2,2020-03-06 16:37:56\nMale,Marvin,Lind,marvin,marvin_lind@hotmail.com,77,Detroit,Chrome Android,2,2020-03-02 13:55:51\nFemale,Shanelle,Marquardt,shanelle,marquardt.shanelle@hotmail.com,21,Las Vegas,Chrome,1,2020-03-05 17:53:05\nFemale,Lavonne,Romaguera,lavonne,romaguera.lavonne@yahoo.com,81,Seattle,Chrome,2,2020-03-04 10:33:53\nMale,Derick,McLaughlin,derick,mclaughlin.derick@hotmail.com,47,Chicago,Chrome Android,1,2020-03-05 15:19:48\n")
