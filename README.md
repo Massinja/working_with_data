@@ -2,18 +2,24 @@
 ***
 
 ## Task
-TODO - What is the problem? And where is the challenge?
+Create array of arrays spliting strings on a separator.  
+Transform data in CSV format and return an array of strings in CSV format some data transformed.  
+Process CSV data and return a json string of hash of hash
+
 
 ## Description
-TODO - How have you solved the problem?
+Implemented functions:  
+my_csv_parser  
+my_data_transform
+my_data_process
 
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+install Ruby
 
 ## Usage
-TODO - How does it work?
+
 ```
-./my_project argument1 argument2
+ruby {file_name}.rb
 ```
 
 ### The Core Team
